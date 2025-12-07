@@ -1,5 +1,4 @@
 @echo off
-rem Print only IPs whose DNS PTR/hostname contains "-000" and output "IP - <room>"
 setlocal enabledelayedexpansion
 
 for /f "tokens=1" %%A in ('arp -a ^| findstr /R "^[ ]*[0-9]"') do (
@@ -21,5 +20,6 @@ for /f "tokens=1" %%A in ('arp -a ^| findstr /R "^[ ]*[0-9]"') do (
         )
     )
 )
+
 
 endlocal
